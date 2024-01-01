@@ -1,0 +1,9 @@
+Here is the problem I told you about. I finally thought of a coherent way to put it.
+
+A computer randomly selects a hidden integer from -5 to 5 inclusive. Whenever it is given a "target" number it will "roll", randomly generate an integer, from 1-20 inclusive and add the hidden integer to it. The computer will tell you neither the hidden integer, nor the random integer rolled nor the total they summed to. It will only tell you if the sum was greater than or equal to the target, eg. it will tell you if it succeeded in the test.
+
+First problem: what targets would you give it to become >95% confident that you know what the hidden integer is? How many tests would you need to run? What is the minimum amount?
+
+Later problem: would this change if the hidden integer was still random, but defined by a bell curve?
+
+Even later problem: how will this change if the computer at some point incremented or decremented the hidden integer by 1?
