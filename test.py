@@ -2,8 +2,8 @@ target = 10
 def probabilityOfSuccessfulTest(hiddenInteger):
     return (hiddenInteger - target + 21) / 20
 
-hiddenInteger = 3
-totalRolls = 600
+hiddenInteger = 0
+totalRolls = 300
 successfulRolls = int(totalRolls * probabilityOfSuccessfulTest(hiddenInteger))
 print(f"Total Rolls: {totalRolls} Successful Rolls: {successfulRolls}")
 
@@ -17,9 +17,9 @@ def predictHiddenIntegerWithConfidence(totalRolls, successfulRolls):
         prob = dist.pmf(successfulRolls)
         probs.append(prob)
 
-    closest = max(probs)
-    guess = probs.index(closest) - 5
-    confidence = closest / sum(probs)
+    maxProb = max(probs)
+    guess = probs.index(maxProb) - 5
+    confidence = maxProb / sum(probs)
     return guess, confidence
 
 guess, confidence = predictHiddenIntegerWithConfidence(totalRolls, successfulRolls)
